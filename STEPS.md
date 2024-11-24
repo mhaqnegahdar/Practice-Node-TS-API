@@ -16,13 +16,13 @@ To initialize and configure an API using typescript, node, Express.
 ### **Instructions:**
 
 1. Config Typescript (tsconfig.json) tsc --init
-2. Install main packages (express, dotenv)
-3. Install dev dependencies (@types/express, @types/node)
-4. Add src directory
-5. Add src/config and .env
-6. Create a src/logging.ts (Optional)
+2. Install main packages `npm i express dotenv`
+3. Install dev dependencies `npm i -D @types/express @types/node`
+4. Add _src_ directory
+5. Add _src/config_ and _.env_
+6. Create a _src/logging.ts_ (Optional)
     - Very Good Practice for future scalablity
-7. Create server.ts
+7. Create _server.ts_
     - Create and Initialize the server
     - Add logging middleware
     - Add cors middleware
@@ -30,7 +30,7 @@ To initialize and configure an API using typescript, node, Express.
     - Add routeNotFound Middleware
     - Start Server
     - Create Shutdown function
-8. Confirm the setup by checking /main/healthcheck route
+8. Confirm the setup by checking _/main/healthcheck_ route
     ```bash
     npm run dev
     ```
@@ -39,28 +39,31 @@ To initialize and configure an API using typescript, node, Express.
 
 Make a get request to the healthcheck route to make sure it works.
 
-<!-- ---
-
 ## **Step 2: [Test Configuration]**
+
 ### **Objective:**
-Explain the purpose of this step.
+
+Help you find bugs that you may have not found before.
 
 ### **Instructions:**
-1. [ ] Configure settings in `config.json`:
-   ```json
-   {
-       "port": 3000,
-       "debug": true
-   }
-   ```
-2. Launch the application using `npm start`.
-3. Open your browser and go to `http://localhost:3000`.
+
+1. Install packages ``.
+    ```bash
+    npm i -D typescript ts-node jest supertest @types/jest @types/supertest
+    ```
+2. Change `tsconfig`
+3. Create `tsconfg.built.json`
+4. Create `jest.config.json`
+5. Add build & test commands:
+6. Write Your First tests.
 
 ### **Expected Outcome:**
+
 The application should load with a welcome message.
 
 ---
 
+<!-- ---
 ## **Step 3: [Descriptive Title of Step]**
 ### **Objective:**
 Outline what this step achieves.
