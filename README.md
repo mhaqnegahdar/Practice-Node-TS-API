@@ -2,18 +2,20 @@
 
 This is a practical **API** using Node, TypeScript. It can be used as a sample starter project aswell
 
-
 ## Technologies
 
-- Node
-- TypeScript
-- **Nextjs v13.4.1**
-- **Main Packages:** 
-- **Secondary Packages:** 
+-   Node
+-   TypeScript
+-   **Nextjs v13.4.1**
+-   **Main Packages:** express,dotenv
+-   **Dev Dependency Packages:** @types/express: , @types/jest: , @types/node: , @types/supertest: , jest: , supertest: , ts-jest: , ts-node: ,
+    ts-node-dev: , typescript
 
 ## Features
 
-- 
+-   Decorated Logging Function
+-   Supports Tests
+-   Typescript Modules
 
 ## Installation
 
@@ -23,7 +25,7 @@ Create **.env** from '.env.example' file and declare the project environment var
 
 Starting a development instance of the app
 
-###### shell command
+###### shell command for development
 
 ```shell
 npm install
@@ -31,6 +33,23 @@ npm install
 npm run dev
 ```
 
+###### shell command for build
+
+```shell
+npm install
+
+npm run build
+
+npm run start
+```
+
+###### shell command for test
+
+```shell
+npm install
+
+npm run test
+```
 
 ## Screenshots
 

@@ -1,11 +1,13 @@
 import http from 'http';
 import express, { Request, Response } from 'express';
-import logging from './config/logging';
+import './config/logging';
 
 // Middlewares
 import { loggingHandler } from './middlewares/loggingHandler';
 import { corsHandler } from './middlewares/corsHandler';
 import { routeNotFound } from './middlewares/routeNotFound';
+
+//Constants
 import { SERVER } from './config/config';
 
 export const application = express();
