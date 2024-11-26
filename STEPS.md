@@ -97,26 +97,15 @@ You should now be able to create your routes in a reusable and much cleaner way
 
 ---
 
-<!-- ---
-## **Step 4: [Finalizing]**
+## **Step 4: [Data Validation]**
 ### **Objective:**
-Wrap up the task or ensure everything is complete.
+Validating data is a curcial asspect of building robust and secure applications.
 
 ### **Instructions:**
-- [ ] Review all changes.
-- [ ] Commit your work to version control:
-   ```bash
-   git add .
-   git commit -m "Completed setup"
-   git push origin main
-   ```
-- [ ] Clean up temporary files if needed.
-
----
-
-## **Additional Notes**
-- Troubleshooting tips (e.g., "If you encounter error X, try Y").
-- References or links to external resources.
+1. Install Joi `npm i joi` (ts library for data validation)
+2. Create Validate decorator
+3. Create Joi schema for the controller
+4. set the validate decorator for the route
 
 ---
 

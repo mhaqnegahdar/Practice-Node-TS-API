@@ -3,3 +3,13 @@ OPTIONS http://localhost:8000
 
 ### Test Route
 GET http://localhost:8000/test/get
+
+### Post Test Route
+
+POST http://localhost:8000/test/post HTTP/1.1
+content-type: application/json
+
+{
+    "username": "mhaqnegahdar",
+    "password": "Whdf234dkf"
+}
