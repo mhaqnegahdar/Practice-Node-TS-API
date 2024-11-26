@@ -1,5 +1,5 @@
 ### Options
 OPTIONS http://localhost:8000
 
-### Healthcheck
-GET http://localhost:8000/main/healthcheck
+### Test Route
+GET http://localhost:8000/test/get

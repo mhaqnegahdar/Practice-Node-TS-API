@@ -1,6 +1,7 @@
 import http from 'http';
 import express, { Request, Response } from 'express';
 import './config/logging';
+import 'reflect-metadata';
 
 // Middlewares
 import { loggingHandler } from './middlewares/loggingHandler';
@@ -9,6 +10,8 @@ import { routeNotFound } from './middlewares/routeNotFound';
 
 //Constants
 import { SERVER } from './config/config';
+import defineRoutes from './modules/route';
+import Test from './controllers/test';
 
 export const application = express();
 export let httpServer: ReturnType<typeof http.createServer>;
@@ -30,9 +33,7 @@ const Main = () => {
     logging.info('Define Controller Routing');
     logging.info('--------------------');
 
-    application.get('/main/healthcheck', (req: Request, res: Response) => {
-        res.status(200).json({ hello: 'world' });
-    });
+    defineRoutes([Test], application);
 
     logging.info('--------------------');
     logging.info('404 Error');

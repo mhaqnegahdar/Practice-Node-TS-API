@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
         "build": "rm -rf /build/ && tsc -p tsconfig.build.json",
-        "start":"node build/server.js",
+        "start": "node build/server.js",
         "test": "jest --config jest.config.ts --detectOpenHandles --coverage --maxWorkers=1"
     },
     "keywords": [],
@@ -14,7 +14,8 @@
     "license": "ISC",
     "dependencies": {
         "dotenv": "^16.4.5",
-        "express": "^4.21.1"
+        "express": "^4.21.1",
+        "reflect-metadata": "^0.2.2"
     },
     "devDependencies": {
         "@types/express": "^5.0.0",
