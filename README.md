@@ -2,14 +2,16 @@
 
 This is a practical **API** using Node, TypeScript. It can be used as a sample starter project aswell
 
+explore the demo [here](https://practice-node-ts-api.onrender.com/test/get)
+
 ## Technologies
 
 -   Node
 -   TypeScript
 -   **Nextjs v13.4.1**
 -   **Main Packages:** express, dotenv, mongoose, joi, reflect-metadata
--   **Dev Dependency Packages:** @types/express: , @types/jest: , @types/node: , @types/supertest: , jest: , supertest: , ts-jest: , ts-node: ,
-    ts-node-dev: , typescript
+-   **Dev Dependency Packages:** @types/express , @types/jest , @types/node , @types/supertest , jest , supertest , ts-jest , ts-node ,ts-node-dev: ,
+    typescript
 
 ## Features
 
@@ -57,6 +59,10 @@ npm run test
 
 Install _Rest Client_ for vs code and use files in _rest_ folder.
 
+## Installation (Production)
+
+[Deployment Guid](https://dev.to/kunalukey/how-to-setup-and-deploy-a-mern-stack-project-for-free-5acl)
+
 ## Screenshots
 
-![Cover](./public/cover.png)
+![Cover](./cover.webp)
