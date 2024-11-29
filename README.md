@@ -7,7 +7,7 @@ This is a practical **API** using Node, TypeScript. It can be used as a sample s
 -   Node
 -   TypeScript
 -   **Nextjs v13.4.1**
--   **Main Packages:** express,dotenv
+-   **Main Packages:** express, dotenv, mongoose, joi, reflect-metadata
 -   **Dev Dependency Packages:** @types/express: , @types/jest: , @types/node: , @types/supertest: , jest: , supertest: , ts-jest: , ts-node: ,
     ts-node-dev: , typescript
 
@@ -16,6 +16,8 @@ This is a practical **API** using Node, TypeScript. It can be used as a sample s
 -   Decorated Logging Function
 -   Supports Tests
 -   Typescript Modules
+-   Validation using Joi
+-   Database Connection & CRUD operation using Mongoose
 
 ## Installation
 
@@ -50,6 +52,10 @@ npm install
 
 npm run test
 ```
+
+###### Testing each individual route
+
+Install _Rest Client_ for vs code and use files in _rest_ folder.
 
 ## Screenshots
 

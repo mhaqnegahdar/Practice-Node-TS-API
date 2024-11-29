@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
+import Joi from 'joi';
 
 // Decorators
 import Controller from '../decorators/controller';
 import Route from '../decorators/route';
 import Validate from '../decorators/validate';
-import Joi from 'joi';
 
 const testSchema = Joi.object({
     username: Joi.string().alphanum().min(3).max(30).required(),

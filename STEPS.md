@@ -98,10 +98,13 @@ You should now be able to create your routes in a reusable and much cleaner way
 ---
 
 ## **Step 4: [Data Validation]**
+
 ### **Objective:**
+
 Validating data is a curcial asspect of building robust and secure applications.
 
 ### **Instructions:**
+
 1. Install Joi `npm i joi` (ts library for data validation)
 2. Create Validate decorator
 3. Create Joi schema for the controller
@@ -109,5 +112,29 @@ Validating data is a curcial asspect of building robust and secure applications.
 
 ---
 
-## **Conclusion**
-A summary of the completed task and any next steps.   -->
+---
+
+## **Step 5: [Database Connection]**
+
+### **Objective:**
+
+Reusable using decorators
+
+### **Instructions:**
+
+1. Install main packages `npm i mongoos`
+2. Set up mongo db Database
+
+3. Add Database credentials to _src/config_ and _.env_
+4. Connect to database using mongoose
+5. Create a schema and its model
+6. Create controllers for crud operations on that model
+7. Declare Handlers for crud operations in each Request
+8. Create Decorators for Crud Operations
+    - Very Good Practice for future scalablity
+9. Added ObjectId Validator Decorator
+10. Add Validate and Crud Decorators to each route
+
+### **Expected Outcome:**
+
+returned value should be match what is in the database

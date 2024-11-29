@@ -1,0 +1,47 @@
+
+### Get Books
+GET http://localhost:8000/books
+
+### Get single book
+GET http://localhost:8000/books/asfsdfa
+
+
+### Insert Book
+POST http://localhost:8000/books 
+content-type: application/json
+
+{
+    "title": "My Beautiful Life 2",
+    "author": "Mohamad Haqnegahdar"
+}
+
+
+
+### Update Book
+PUT http://localhost:8000/books/:id 
+content-type: application/json
+
+{
+    "title": "mhaqnegahdar",
+    "author": "Whdf234dkf"
+}
+
+
+
+
+
+### Delete Book
+DELETE http://localhost:8000/books/sdfaf
+
+
+
+
+### Search Book
+POST http://localhost:8000/books/search 
+content-type: application/json
+
+{
+    "author": { "$regex": "^Mohamad Haqnegahdar" }
+}
+
+

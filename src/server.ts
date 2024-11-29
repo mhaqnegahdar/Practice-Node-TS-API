@@ -1,5 +1,6 @@
 import http from 'http';
-import express, { Request, Response } from 'express';
+import express from 'express';
+import mongoose from 'mongoose';
 import './config/logging';
 import 'reflect-metadata';
 
@@ -9,9 +10,11 @@ import { corsHandler } from './middlewares/corsHandler';
 import { routeNotFound } from './middlewares/routeNotFound';
 
 //Constants
-import { SERVER } from './config/config';
+import { MONGO, SERVER } from './config/config';
 import defineRoutes from './modules/route';
 import Test from './controllers/test';
+import { declareHandler } from './middlewares/declareHandler';
+import Book from './controllers/book';
 
 export const application = express();
 export let httpServer: ReturnType<typeof http.createServer>;
@@ -24,8 +27,26 @@ const Main = () => {
     application.use(express.json());
 
     logging.info('--------------------');
+    logging.info('Database Connection');
+    logging.info('--------------------');
+
+    mongoose
+        .connect(MONGO.MONGO_CONNECTION, MONGO.MONGO_OPTIONS)
+        .then((connection) => {
+            logging.info('--------------------');
+            logging.info(`Connected to Mongo: ${connection.version}`);
+            logging.info('--------------------');
+        })
+        .catch((error) => {
+            logging.error('--------------------');
+            logging.error(`Error Connecting to Mongo: ${error}`);
+            logging.error('--------------------');
+        });
+
+    logging.info('--------------------');
     logging.info('Logging & Configuration');
     logging.info('--------------------');
+    application.use(declareHandler);
     application.use(loggingHandler);
     application.use(corsHandler);
 
@@ -33,7 +54,7 @@ const Main = () => {
     logging.info('Define Controller Routing');
     logging.info('--------------------');
 
-    defineRoutes([Test], application);
+    defineRoutes([Test,Book], application);
 
     logging.info('--------------------');
     logging.info('404 Error');
